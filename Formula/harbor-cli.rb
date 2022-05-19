@@ -11,7 +11,7 @@ class HarborCli < Formula
 
   on_macos do
     url "https://github.com/hinyinlam/cli-for-harbor-go/releases/tag/v0.0.2/cli-for-harbor-go_0.0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "d7ad2d3deab32455c96ecef97f8ba2c5a43e0fdfe804fe56adff9819827385d3"
+    sha256 "370d9e22ab233049820ff1ed1ee0c2e2aed8490beb051afe18b83e763c4e3ed4"
 
     def install
       bin.install "harbor"
