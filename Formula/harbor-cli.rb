@@ -7,23 +7,41 @@ class HarborCli < Formula
   homepage "https://github.com/hinyinlam/cli-for-harbor"
   version "0.0.2"
   license "Apache 2.0"
-  depends_on :macos
 
   on_macos do
-    url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "b7bb805fe6ffa7d7b885b224def5bf2c025d7567af4c2b3530b3f64045cf6762"
-
-    def install
-      bin.install "harbor"
-    end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the HarborCli
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "e65992d4b6b09904d7c6939410390b33b07c0d7712a8dd14eb38634f75c8b69d"
+
+      def install
+        bin.install "harbor"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "b6d2b999618755175806f5666be3adbe94cabe95a285e015fc2886d610ef94b0"
+
+      def install
+        bin.install "harbor"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "ea78a72391c45a1e5f2a441959dcd20a71c68c2d5f5c82b03d0968ce9f6265b3"
+
+      def install
+        bin.install "harbor"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "10d99d2113190b8c14f2c423f53f072acedf9c4af15d974f11c388543f7fa712"
+
+      def install
+        bin.install "harbor"
       end
     end
   end
