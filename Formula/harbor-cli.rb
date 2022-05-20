@@ -10,16 +10,16 @@ class HarborCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "462fc30c55958ea0df2b5a76d925132ff53a31186881fcc3710c8e4584dfdedb"
+      url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.2/cli-for-harbor_0.0.2_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "e8da17d46ec500abcf8742aac088d27f99910f5a5fd33602153cf91c09db7f1a"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "a616666c96a5a113ac547509ad3c8a11aea982e170b35297c9ad3d1b5c95b45f"
+      url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.2/cli-for-harbor_0.0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "4b5c547b762e620bbf31561a442c4c59b15a2291fe05051ba8796aab78b573a6"
 
       def install
         bin.install "harbor"
@@ -29,16 +29,16 @@ class HarborCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d910169cd720fed5bfcd6cbdfa2103396e22d2703c630b246619dc0c74e2e3d1"
+      url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.2/cli-for-harbor_0.0.2_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "ee784757a8639d1ee55628fc38b7f4dc25e77c4d92a740cbda58ed349731f51c"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hinyinlam/cli-for-harbor-go/releases/download/v0.0.2/cli-for-harbor-go_0.0.2_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "807a3cdd187d3514dd4259de9ebe9c7141a9ca69420bfbb8140d15f551bb5729"
+      url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.2/cli-for-harbor_0.0.2_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "bfff713d852d54b2ccc461d55720498cacde24c21345445ccb2c149eaac5de14"
 
       def install
         bin.install "harbor"
