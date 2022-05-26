@@ -11,7 +11,7 @@ class HarborCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.4/cli-for-harbor_0.0.4_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "ac5dfd0814bf522279bde99704f782f85f62e4892b2f8ef8a13b580dbeaaa255"
+      sha256 "bc5d8a890f23cdd7ee78a8640aefdeb194843340df8774d09c89d9d5b3b85b90"
 
       def install
         bin.install "harbor"
@@ -19,7 +19,7 @@ class HarborCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.4/cli-for-harbor_0.0.4_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "058f641984c62e61877f9a51a3e7fa54d5426e245073d9272579307b364db09d"
+      sha256 "0417a7a76b47b41c7316b6e5b72d85afc9ce4fb99320e2dbe1eea9cc3ca5ae02"
 
       def install
         bin.install "harbor"
@@ -30,7 +30,7 @@ class HarborCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.4/cli-for-harbor_0.0.4_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c5263f10d604b1cded6f984f43a5eaa61579050ffe2fdcf64ab157e56d708925"
+      sha256 "0f6939e4c7c19e1f892bfc5d1ec771f75d64c927da03d2841981d5df5b037a95"
 
       def install
         bin.install "harbor"
@@ -38,7 +38,7 @@ class HarborCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/hinyinlam/cli-for-harbor/releases/download/v0.0.4/cli-for-harbor_0.0.4_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "3951ed31ae146e28900ebdf42131e3b9f8694708f72fb7c68a4c576c610298f7"
+      sha256 "cfcc7c0fe48607ef3ab7b063484c27fd4272b27932f70add9f2b1ac65155eff2"
 
       def install
         bin.install "harbor"
